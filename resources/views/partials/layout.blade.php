@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="w-full">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     @yield("head")
 </head>
-<body class="w-full bg-gray-100 flex flex-col">
+<body class="h-full bg-gray-100 flex flex-col">
     <header class="flex-shrink-0">
         <section class="w-[500px] mx-auto p-5">
             <h1 class="text-4xl text-center">KBS To Do List</h1>
