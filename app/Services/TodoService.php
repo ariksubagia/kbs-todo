@@ -28,12 +28,18 @@ class TodoService implements ITodoService{
         return $todo;
     }
 
-    public function getListTodo(User $user = NULL): Collection{
+    public function getListTodo(User $user = NULL, string|null $search = NULL): Collection{
         $q = Todo::query();
 
         if( !is_null($user) ){
             $q->where('user_id', $user->id);
         }
+
+        if( !is_null($search) ){
+            $q->whereLike('title', '%' . $search . '%');
+        }
+
+        $q->orderBy('id', 'DESC');
 
         return $q->get();
     }

@@ -12,5 +12,5 @@ interface ITodoService{
 
     public function setCompleted(int $id, bool $status = true): Todo;
 
-    public function getListTodo(User $user = NULL): Collection;
+    public function getListTodo(User $user = NULL, string|null $search = NULL): Collection;
 }
